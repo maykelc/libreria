@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <!-- CARD CATEGORIA CON AOS.JS -->
+    <div class="col-sm-12" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-offset="0"><br>
+        <br><h3>Categorias</h3><br>
+        <div class="card-columns">
+            {% for categoria in categorias %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ categoria.nombre }}</h5>
+                    <p class="card-text">{{ categoria.description_cat }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
